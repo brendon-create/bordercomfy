@@ -1,0 +1,14 @@
+# 忽略系統文件
+.DS_Store
+Thumbs.db
+
+# 忽略 memory-bank（僅用於開發參考）
+memory-bank/
+
+# 忽略臨時文件
+*.log
+*.swp
+*.swo
+
+# 忽略上傳的原始 Wix 文件（可選保留）
+# 官網wix資料/
