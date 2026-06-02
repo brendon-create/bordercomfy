@@ -34,7 +34,7 @@
   }
 
   /* Sections excluded from all animations */
-  var NO_ANIM_SECTIONS = ['comp-lia02dzq', 'comp-libjlsi1', 'SITE_FOOTER'];
+  var NO_ANIM_SECTIONS = ['comp-lia02dzq', 'comp-libjlsi1', 'SITE_FOOTER', 'comp-lhzzyqfb'];
 
   function isExcluded(el) {
     for (var i = 0; i < NO_ANIM_SECTIONS.length; i++) {
@@ -51,22 +51,11 @@
     return ICON_BOX_IDS.some(function (id) { return !!el.closest('#' + id); });
   }
 
-  /* ── Fix camping tent section bg (replace LQIP with full quality) ── */
-  function fixCampingBg() {
-    var bgMedia = document.getElementById('bgMedia_comp-lhzzyqfb');
-    if (!bgMedia) return;
-    var img = bgMedia.querySelector('img');
-    if (!img) return;
-    img.src = 'assets/ba616a_5bb22f7b54fe4713916c7b87c26b26be_mv2.png';
-    img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:50% 50%;';
-  }
 
   /* ── Main init ────────────────────────────────────────────────── */
   function init() {
     var root = document.getElementById('PAGES_CONTAINER');
     if (!root) return;
-
-    fixCampingBg();
 
     /* Text blocks */
     root.querySelectorAll('[data-testid="richTextElement"]').forEach(function (el) {
