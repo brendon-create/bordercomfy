@@ -51,41 +51,14 @@
     return ICON_BOX_IDS.some(function (id) { return !!el.closest('#' + id); });
   }
 
-  /* ── Parallax for camping tent section ──────────────────────── */
-  function initParallax() {
-    var section = document.getElementById('comp-lhzzyqfb');
-    if (!section) return;
+  /* ── Fix camping tent section bg (replace LQIP with full quality) ── */
+  function fixCampingBg() {
     var bgMedia = document.getElementById('bgMedia_comp-lhzzyqfb');
     if (!bgMedia) return;
     var img = bgMedia.querySelector('img');
     if (!img) return;
-
     img.src = 'assets/ba616a_5bb22f7b54fe4713916c7b87c26b26be_mv2.png';
-    img.style.cssText = [
-      'width:100%;height:140%;',
-      'object-fit:cover;object-position:50% 50%;',
-      'position:absolute;top:-20%;left:0;',
-      'will-change:transform;'
-    ].join('');
-
-    var ticking = false;
-
-    function update() {
-      var rect = section.getBoundingClientRect();
-      var vh = window.innerHeight;
-      if (rect.bottom < 0 || rect.top > vh) { ticking = false; return; }
-      var progress = (vh - rect.top) / (vh + rect.height);
-      progress = Math.max(0, Math.min(1, progress));
-      var shift = (progress - 0.5) * 60;
-      img.style.transform = 'translateY(' + shift + 'px)';
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', function () {
-      if (!ticking) { requestAnimationFrame(update); ticking = true; }
-    }, { passive: true });
-
-    update();
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:50% 50%;';
   }
 
   /* ── Main init ────────────────────────────────────────────────── */
@@ -93,7 +66,7 @@
     var root = document.getElementById('PAGES_CONTAINER');
     if (!root) return;
 
-    initParallax();
+    fixCampingBg();
 
     /* Text blocks */
     root.querySelectorAll('[data-testid="richTextElement"]').forEach(function (el) {
