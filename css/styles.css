@@ -241,20 +241,20 @@ img {
 /* --- 特色區塊 --- */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg) 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
 }
 
 .feature-card {
   text-align: center;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-sm);
 }
 
 .feature-card img {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--spacing-md);
+  width: 70px;
+  height: 70px;
+  margin: 0 auto var(--spacing-sm);
   object-fit: contain;
 }
 
@@ -546,7 +546,7 @@ img {
   }
   
   .features {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .testimonial-grid {
