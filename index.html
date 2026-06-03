@@ -20,7 +20,6 @@
       background-image: url('assets/11062b_d1fb906ee9294c0fbfa7b88a618de5ef_mv2.jpg');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -98,7 +97,6 @@
       background-image: url('assets/ba616a_5bb22f7b54fe4713916c7b87c26b26be_mv2.png');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       padding: 80px 0;
       position: relative;
     }
@@ -133,7 +131,6 @@
       background-image: url('assets/11062b_4284e7453d854ea9add5e718ad255d3d_mv2.jpg');
       background-size: cover;
       background-position: center 30%;
-      background-attachment: fixed;
       padding: 80px 0;
       position: relative;
     }
@@ -437,60 +434,71 @@
     /* ===== RETAILERS SECTION ===== */
     .retailers-section {
       padding: 70px 0;
-      background: #fff;
+      background: #272120;
     }
     .retailers-section .section-heading {
       text-align: center;
       font-size: clamp(22px, 3vw, 32px);
-      color: #272120;
+      color: #D0AC68;
       margin-bottom: 10px;
     }
     .retailers-intro {
       text-align: center;
       font-size: 16px;
-      color: #655646;
+      color: #cfc9c3;
       max-width: 640px;
       margin: 0 auto 50px;
       line-height: 1.8;
     }
+    .retailers-intro strong { color: #D0AC68; }
     .region-heading {
       font-size: 20px;
       font-weight: bold;
-      color: #272120;
+      color: #D0AC68;
       border-left: 4px solid #D0AC68;
       padding-left: 12px;
       margin: 40px 0 20px;
     }
     .retailer-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 18px;
     }
     .retailer-card {
-      background: #f5f1eb;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(208,172,104,0.2);
       border-radius: 8px;
-      padding: 20px 22px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .retailer-card .store-logo {
+      width: 120px;
+      height: 88px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+      display: block;
     }
     .retailer-card h3 {
-      font-size: 17px;
-      color: #272120;
+      font-size: 15px;
+      color: rgb(159,140,130);
       margin-bottom: 8px;
-      font-weight: bold;
+      font-weight: normal;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
     .retailer-card p {
-      font-size: 13px;
-      color: #655646;
-      line-height: 1.7;
+      font-size: 12px;
+      color: #fff;
+      line-height: 1.6;
       margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
     }
     .retailer-card a {
-      font-size: 13px;
+      font-size: 12px;
       color: #D0AC68;
       text-decoration: underline;
-      font-weight: bold;
     }
     .retailer-card a:hover {
-      color: #272120;
+      color: #fff;
     }
 
     /* ===== CONTACT SECTION ===== */
@@ -547,9 +555,6 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .hero-photo { background-attachment: scroll; }
-      .story-section { background-attachment: scroll; }
-      .demo-section { background-attachment: scroll; }
       .specs-layout { grid-template-columns: 1fr; }
       .usage-grid { grid-template-columns: 1fr; }
       .benefits-grid { grid-template-columns: 1fr; }
@@ -803,45 +808,54 @@
         <h3 class="region-heading bc-fade-up">北區經銷商</h3>
         <div class="retailer-cards">
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_23dad84b211a4415b8ba70a8aea65188~mv2.png" alt="長毛象"/>
             <h3>長毛象休閒旅遊名店</h3>
             <p>民權店　台北市民權東路三段181號　(02)2719-0258<br/>新店店　新北市新店區中興路一段18號1樓　(02)8914-5509</p>
             <a href="https://www.outdoorbuy.com.tw/product/border-comfy/" target="_blank" rel="noopener noreferrer">長毛象線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="60">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_7dbe8184373e4799a66325822c453a97~mv2.png" alt="露雅迷"/>
             <h3>露雅迷露營生活精品</h3>
             <p>桃園市中壢區長春六路5號　(03)462-9329</p>
             <a href="https://www.luyami.net/products/border-comfy-舒適邊境枕" target="_blank" rel="noopener noreferrer">露雅迷線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="120">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_76f5c033c02f420591ae23bf68ea0f18~mv2.png" alt="台北山水"/>
             <h3>台北山水</h3>
             <p>台北店-服飾館　台北市中正區中山北路一段6-1號　(02)2311-1935<br/>台北店-裝備館　台北市中正區中山北路一段12號　(02)2361-9507</p>
             <a href="https://www.tpshanshui.com.tw/products/border-comfy-%E8%88%92%E9%81%A9%E9%82%8A%E5%A2%83%E6%9E%95" target="_blank" rel="noopener noreferrer">台北山水線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="180">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_274884df15374f8d8bf6acc95836b8ff~mv2.png" alt="Camping Bar"/>
             <h3>Camping Bar PLUS</h3>
             <p>新北市新店區民權路42巷59弄1號7樓　(02)8666-6509</p>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_79b464efca70491684a84852594f00d7~mv2.png" alt="早點名"/>
             <h3>早點名露營生活館</h3>
-            <p>汐止日月光門市　新北市汐止區康寧街751巷13號2樓　(02)2691-5770<br/>林口門市　新北市林口區文化三路一段2號 4F 402（Global Mall林口A9）　(02)5568-6477<br/>桃園門市　桃園市八德區仁德一路88號　(03)3680-329<br/>芎林門市　新竹縣芎林鄉富林路三段330號　(03)592-6060</p>
+            <p>汐止日月光　新北市汐止區康寧街751巷13號2樓　(02)2691-5770<br/>林口門市　新北市林口區文化三路一段2號 4F 402　(02)5568-6477<br/>桃園門市　桃園市八德區仁德一路88號　(03)3680-329<br/>芎林門市　新竹縣芎林鄉富林路三段330號　(03)592-6060</p>
             <a href="https://www.morv.com.tw/products/4318839b-e9b5-44f3-a7d4-a1d448056aab" target="_blank" rel="noopener noreferrer">早點名線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="60">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_810e54f49ff540758f4cb0073206bd75~mv2.png" alt="露營中毒本舖"/>
             <h3>露營中毒本舖</h3>
             <p>台北市士林區延平北路八段157巷49號之2　(02)8811-1817</p>
             <a href="https://www.pomi.tw/products/b03013-1" target="_blank" rel="noopener noreferrer">露營中毒本舖線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="120">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_28a139e478a242f09eac62539a6c4500~mv2.jpg" alt="愛上露營"/>
             <h3>愛上露營</h3>
             <p>台北市松山區健康路22號　(02)2546-8661<br/>新竹縣竹東鎮公道路958號-2號　(03)577-1325</p>
             <a href="https://www.ilovecamp.tw/products/border-comfy-%E8%88%92%E9%81%A9%E9%82%8A%E5%A2%83%E6%9E%95" target="_blank" rel="noopener noreferrer">愛上露營線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="180">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_4a7cff51b2174f86b34f0676d8067379~mv2.png" alt="逐露天下"/>
             <h3>逐露天下</h3>
             <p>板橋店　新北市板橋區環漢路四段662號之一　(02)2687-4188<br/>竹北旗艦店　新竹縣竹北市福興東路一段252號　(03)668-1999</p>
             <a href="https://www.campworld.tw/products/b34271" target="_blank" rel="noopener noreferrer">逐露天下線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_cf4d831ea5964412a49a1a88d85bd173~mv2.jpg" alt="周公的墊"/>
             <h3>周公的墊</h3>
             <p>文山景美店　台北市文山區景興路37號　(02)2933-7733<br/>板橋中和店　新北市板橋區漢生東路279巷40號　(02)2212-5900<br/>新莊新泰店　新北市新莊區新泰路280號　(02)8992-0003</p>
           </div>
@@ -850,36 +864,43 @@
         <h3 class="region-heading bc-fade-up" style="margin-top:50px;">中區經銷商</h3>
         <div class="retailer-cards">
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_c49425b8de304098bb2d511e85b50cf4~mv2.png" alt="山嶼山"/>
             <h3>山嶼山戶外選物</h3>
             <p>台中市西屯區安和西路85號（前棟）　(04)2350-9980</p>
             <a href="https://www.waweditions.com/products/bordercomfy-comfortpillow" target="_blank" rel="noopener noreferrer">山嶼山線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="60">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_76f5c033c02f420591ae23bf68ea0f18~mv2.png" alt="台北山水"/>
             <h3>台北山水（中部）</h3>
             <p>河南店　台中市西屯區河南路2段482號　(04)2702-1866<br/>台中向上南店　台中市南屯區向上南路一段163之7號　(04)2472-4589<br/>台中東海店　台中市龍井區台灣大道五段45號2樓　(04)2631-0951</p>
             <a href="https://www.tpshanshui.com.tw/products/border-comfy-%E8%88%92%E9%81%A9%E9%82%8A%E5%A2%83%E6%9E%95" target="_blank" rel="noopener noreferrer">台北山水線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="120">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_4a7cff51b2174f86b34f0676d8067379~mv2.png" alt="逐露天下"/>
             <h3>逐露天下（中部）</h3>
             <p>北屯店　台中市北屯區太原路三段1009號　(04)2436-4020<br/>南屯店　台中市南屯區萬安街156號　(04)2380-4198</p>
             <a href="https://www.campworld.tw/products/b34271" target="_blank" rel="noopener noreferrer">逐露天下線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="180">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_3d199ebb9a1b47febd41ff46c268a7ef~mv2.jpg" alt="Z.D. Outdoor"/>
             <h3>Z.D. Outdoor</h3>
             <p>台中市西屯區環中路二段1231號　(04)2452-4271</p>
             <a href="https://zdoutdoor.shoplineapp.com/products/border-comfy-舒適邊境枕-露營枕頭-人體工學-非充氣枕-便攜枕-枕頭-露營-野營-睡墊-車宿-辦公室" target="_blank" rel="noopener noreferrer">ZD Outdoor線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_364f019fbd624c3ab8ef4f30ec260c9a~mv2.jpg" alt="丹大戶外"/>
             <h3>丹大戶外用品</h3>
             <p>台中市大雅區中清路四段39-3號　(04)2567-0228</p>
             <a href="https://www.dandaoutdoor.com/outdoorhome/4287/detail-01d8ca60-3068-11ee-b9ac-ebff7a0857ec?page=1" target="_blank" rel="noopener noreferrer">丹大戶外線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="60">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_79b464efca70491684a84852594f00d7~mv2.png" alt="早點名"/>
             <h3>早點名露營生活館（中部）</h3>
             <p>台中門市　台中市南屯區五權西路二段1168號　(04)2386-1608</p>
             <a href="https://www.morv.com.tw/products/4318839b-e9b5-44f3-a7d4-a1d448056aab" target="_blank" rel="noopener noreferrer">早點名線上商店 →</a>
           </div>
           <div class="retailer-card bc-fade-up" data-bc-delay="120">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_cf4d831ea5964412a49a1a88d85bd173~mv2.jpg" alt="周公的墊"/>
             <h3>周公的墊（中部）</h3>
             <p>台中體驗館　台中市北區忠明路424號19F-1（大安貿易大樓）　0928-038-222</p>
           </div>
@@ -888,6 +909,7 @@
         <h3 class="region-heading bc-fade-up" style="margin-top:50px;">南區經銷商</h3>
         <div class="retailer-cards">
           <div class="retailer-card bc-fade-up" data-bc-delay="0">
+            <img class="store-logo" src="https://static.wixstatic.com/media/ba616a_79b464efca70491684a84852594f00d7~mv2.png" alt="早點名"/>
             <h3>早點名露營生活館（南部）</h3>
             <p>嘉義店　嘉義縣中埔鄉頂中下街69號　(05)3209065<br/>台南門市　台南市仁德區大同路三段755號2F（家樂福新仁店）　(06)703-1041<br/>高雄門市　高雄市仁武區水管路三段845-1號　(07)956-2776</p>
             <a href="https://www.morv.com.tw/products/4318839b-e9b5-44f3-a7d4-a1d448056aab" target="_blank" rel="noopener noreferrer">早點名線上商店 →</a>
