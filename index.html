@@ -55,9 +55,33 @@
     p, li, td, th, .retailer-card p {
       font-family: 'helvetica-w01-roman', Helvetica, Arial, sans-serif;
     }
+    /* ===== HERO NAV ===== */
+    .hero-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      padding: 18px 24px;
+    }
+    .hero-nav a {
+      color: rgba(255,255,255,0.80);
+      font-family: 'futura-lt-w01-light', Helvetica, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .hero-nav a:hover { color: #fff; }
+    @media (max-width: 520px) {
+      .hero-nav { gap: 18px; flex-wrap: wrap; justify-content: center; }
+      .hero-nav a { font-size: 12px; }
+    }
+
     /* ===== HERO ===== */
     .hero-photo {
-      min-height: 100vh;
+      min-height: 85vh;
       background-image: url('assets/11062b_d1fb906ee9294c0fbfa7b88a618de5ef_mv2.jpg');
       background-size: cover;
       background-position: center;
@@ -606,32 +630,16 @@
 <body>
 
   <!-- ===== HEADER ===== -->
-  <header class="header" id="top">
-    <div class="container">
-      <a class="logo" href="index.html">
-        <img src="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png" alt="Border Comfy 舒適邊境" width="40" height="40"/>
-      </a>
-      <button class="menu-toggle" aria-label="開啟選單" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#retailers">零售通路</a></li>
-        <li><a href="warranty.html">保固與服務</a></li>
-        <li><a href="faq.html">常見問題</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="http://www.instagram.com/bordercomfy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="assets/01c3aff52f2a4dffa526d7a9843d46ea.png" alt="Instagram" width="20" height="20"/>
-        </a>
-      </div>
-    </div>
-  </header>
-
   <main>
 
     <!-- ===== HERO ===== -->
     <section class="hero-photo" aria-label="首頁橫幅">
+      <nav class="hero-nav">
+        <a href="index.html">Home</a>
+        <a href="#retailers">零售通路</a>
+        <a href="warranty.html">保固與服務</a>
+        <a href="faq.html">常見問題</a>
+      </nav>
       <div class="hero-inner">
         <img src="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png" alt="Border Comfy Logo" class="hero-logo bc-zoom"/>
         <h1 class="bc-fade-up" data-bc-delay="150">舒適邊境</h1>
