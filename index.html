@@ -582,29 +582,40 @@
     .contact-items {
       display: flex;
       flex-wrap: wrap;
-      gap: 32px;
+      gap: 20px;
       justify-content: center;
-      align-items: center;
-      margin-top: 24px;
+      margin-top: 0;
     }
-    .contact-item {
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 18px 28px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      min-width: 220px;
+    }
+    .contact-link:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-3px);
+    }
+    .contact-link div {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 10px;
+      gap: 3px;
     }
-    .contact-item img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
+    .contact-link strong {
+      font-family: 'futura-lt-w01-book', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      font-weight: normal;
     }
-    .contact-item a, .contact-item span {
-      color: #cfc9c3;
-      font-size: 15px;
-      text-decoration: none;
-    }
-    .contact-item a:hover {
-      color: #D0AC68;
+    .contact-link span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
     }
 
     /* ===== FOOTER ===== */
@@ -638,7 +649,6 @@
         <a href="index.html">Home</a>
         <a href="#retailers">零售通路</a>
         <a href="warranty.html">保固與服務</a>
-        <a href="faq.html">常見問題</a>
       </nav>
       <div class="hero-inner">
         <img src="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png" alt="Border Comfy Logo" class="hero-logo bc-zoom"/>
@@ -972,26 +982,39 @@
     <section class="contact-section">
       <div class="container">
         <h2 class="bc-fade-up">聯繫我們</h2>
+        <p class="bc-fade-up" style="color:#cfc9c3;font-size:16px;margin-bottom:36px;" data-bc-delay="60">有任何問題或想法，歡迎透過以下管道私訊我們</p>
         <div class="contact-items">
-          <div class="contact-item bc-fade-scale" data-bc-delay="0">
-            <img src="assets/01c3aff52f2a4dffa526d7a9843d46ea.png" alt="Instagram"/>
-            <a href="http://www.instagram.com/bordercomfy" target="_blank" rel="noopener noreferrer">舒適邊境官方 Instagram</a>
-          </div>
-          <div class="contact-item bc-fade-scale" data-bc-delay="80">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="48" height="48" rx="10" fill="#06C755"/>
-              <path d="M24 10C16.27 10 10 15.58 10 22.4c0 3.76 1.95 7.12 5 9.44V36l4.56-2.5c1.38.38 2.85.58 4.44.58 7.73 0 14-5.58 14-12.4C42 15.58 31.73 10 24 10z" fill="white"/>
+          <a class="contact-link bc-fade-scale" href="https://lin.ee/cgOdQUp" target="_blank" rel="noopener noreferrer" data-bc-delay="0">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="52" height="52" rx="12" fill="#06C755"/>
+              <path d="M26 11C17.72 11 11 16.9 11 24.15c0 4.07 2.11 7.7 5.42 10.21V40l4.93-2.7c1.49.41 3.08.63 4.65.63 8.28 0 15-5.9 15-13.78C41 16.9 34.28 11 26 11z" fill="white"/>
             </svg>
-            <a href="https://lin.ee/cgOdQUp" target="_blank" rel="noopener noreferrer">點擊加入官方 Line<br/><span>ID: @201tjnys</span></a>
-          </div>
-          <div class="contact-item bc-fade-scale" data-bc-delay="160">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="48" height="48" rx="10" fill="#444"/>
-              <path d="M8 14a2 2 0 012-2h18a2 2 0 012 2v16a2 2 0 01-2 2H10a2 2 0 01-2-2V14z" fill="none" stroke="white" stroke-width="2"/>
-              <path d="M8 14l12 10 12-10" stroke="white" stroke-width="2"/>
+            <div>
+              <strong>LINE 官方帳號</strong>
+              <span>ID: @201tjnys</span>
+            </div>
+          </a>
+          <a class="contact-link bc-fade-scale" href="http://www.instagram.com/bordercomfy" target="_blank" rel="noopener noreferrer" data-bc-delay="120">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+                  <stop offset="0%" stop-color="#fdf497"/>
+                  <stop offset="5%" stop-color="#fdf497"/>
+                  <stop offset="45%" stop-color="#fd5949"/>
+                  <stop offset="60%" stop-color="#d6249f"/>
+                  <stop offset="90%" stop-color="#285AEB"/>
+                </radialGradient>
+              </defs>
+              <rect width="52" height="52" rx="12" fill="url(#ig-grad)"/>
+              <rect x="15" y="15" width="22" height="22" rx="6" stroke="white" stroke-width="2.2" fill="none"/>
+              <circle cx="26" cy="26" r="5.5" stroke="white" stroke-width="2.2" fill="none"/>
+              <circle cx="34" cy="18" r="1.5" fill="white"/>
             </svg>
-            <a href="mailto:service@brendonchen.com">service@brendonchen.com</a>
-          </div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@bordercomfy</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
