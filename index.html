@@ -12,49 +12,12 @@
   <link rel="icon" sizes="192x192" href="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png"/>
   <link rel="shortcut icon" href="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png"/>
   <link rel="apple-touch-icon" href="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
   <style>
-    /* ===== FONTS ===== */
-    @font-face {
-      font-family: 'futura-lt-w01-book';
-      font-style: normal; font-weight: 400; font-display: swap;
-      src: url('fonts/futura-lt-w01-book.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'futura-lt-w01-light';
-      font-style: normal; font-weight: 400; font-display: swap;
-      src: url('fonts/futura-lt-w05-light.woff2') format('woff2'),
-           url('fonts/futura-lt-w01-light.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'helvetica-w01-roman';
-      font-style: normal; font-weight: 400; font-display: swap;
-      src: url('fonts/helvetica-w02-roman.woff2') format('woff2'),
-           url('fonts/helvetica-w01-roman.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'helvetica-w01-bold';
-      font-style: normal; font-weight: 400; font-display: swap;
-      src: url('fonts/helvetica-w02-bold.woff2') format('woff2'),
-           url('fonts/helvetica-w01-bold.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'helvetica-w01-light';
-      font-style: normal; font-weight: 400; font-display: swap;
-      src: url('fonts/helvetica-w02-light.woff2') format('woff2'),
-           url('fonts/helvetica-w01-light.woff2') format('woff2');
-    }
-    /* Apply fonts globally */
-    body {
-      font-family: 'helvetica-w01-roman', Helvetica, Arial, sans-serif;
-    }
-    h1, h2, h3, h4, h5, h6,
-    .nav-menu a, .btn, .btn-gold {
-      font-family: 'futura-lt-w01-book', 'Futura', Helvetica, Arial, sans-serif;
-    }
-    p, li, td, th, .retailer-card p {
-      font-family: 'helvetica-w01-roman', Helvetica, Arial, sans-serif;
-    }
     /* ===== HERO NAV ===== */
     .hero-nav {
       position: absolute;
@@ -378,14 +341,36 @@
       color: #272120;
       margin-bottom: 30px;
     }
-    .cleaning-steps {
-      max-width: 700px;
+    .cleaning-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
     }
     .cleaning-steps p {
-      font-size: 17px;
+      font-size: 16px;
       color: #444;
-      line-height: 1.8;
-      margin-bottom: 16px;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+    .cleaning-steps p:last-child { margin-bottom: 0; }
+    .cleaning-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .cleaning-photos img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cleaning-photos img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    @media (max-width: 680px) {
+      .cleaning-layout { grid-template-columns: 1fr; }
     }
 
     /* ===== SPECS SECTION ===== */
@@ -803,10 +788,17 @@
     <section class="cleaning-section">
       <div class="container">
         <h2 class="bc-fade-up">清潔與維護</h2>
-        <div class="cleaning-steps">
-          <p class="bc-fade-up" data-bc-delay="60">一般來說，只要在收帳前讓舒適邊境枕在帳下自然通風一陣子，排出前一晚睡覺時殘存的少量濕氣，直接收納即可。</p>
-          <p class="bc-fade-up" data-bc-delay="120">如果想要清洗，只要裝入細網洗衣袋中，即可用洗衣機的「手洗」、「柔洗」或「羊毛洗程」清洗。</p>
-          <p class="bc-fade-up" data-bc-delay="180">清潔完後，可自然風乾或用烘衣機低溫烘乾（通常為40～50度C，最高不超過60度C）。</p>
+        <div class="cleaning-layout">
+          <div class="cleaning-steps">
+            <p class="bc-fade-up" data-bc-delay="60">一般來說，只要在收帳前讓舒適邊境枕在帳下自然通風一陣子，排出前一晚睡覺時殘存的少量濕氣，直接收納即可。</p>
+            <p class="bc-fade-up" data-bc-delay="120">如果想要清洗，只要裝入細網洗衣袋中，即可用洗衣機的「手洗」、「柔洗」或「羊毛洗程」清洗。</p>
+            <p class="bc-fade-up" data-bc-delay="180">清潔完後，可自然風乾或用烘衣機低溫烘乾（通常為40～50度C，最高不超過60度C）。</p>
+          </div>
+          <div class="cleaning-photos bc-from-tr">
+            <img src="assets/ba616a_79411422e8704db4a6af461384521df7_mv2.jpeg" alt="清潔示範" loading="lazy"/>
+            <img src="assets/ba616a_871d1681245a4fd9b4ed6d37bfde4668_mv2.jpg" alt="清潔步驟" loading="lazy"/>
+            <img src="assets/Pouring_20Laundry_20Detergent.jpeg" alt="清洗示範" loading="lazy"/>
+          </div>
         </div>
       </div>
     </section>

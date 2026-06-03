@@ -15,9 +15,9 @@
   --color-text-light: #666666;
   
   /* 字體 */
-  --font-heading: 'Futura', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif: 'Didot', 'Times New Roman', serif;
+  --font-heading: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  --font-body: 'DM Sans', 'Noto Sans TC', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
   
   /* 間距 */
   --spacing-xs: 8px;
