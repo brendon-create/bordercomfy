@@ -84,9 +84,12 @@ function initFAQ() {
 
 /* --- 滾動動畫 --- */
 function initScrollAnimations() {
-  const animatedElements = document.querySelectorAll('.feature-card, .testimonial-card, .retailer-card, .link-card');
-  
-  // 使用 Intersection Observer 來檢測元素是否可見
+  // 跳過已由 animations.js (bc-* 類別) 處理的元素
+  const all = document.querySelectorAll('.feature-card, .testimonial-card, .retailer-card, .link-card');
+  const animatedElements = Array.from(all).filter(
+    el => !el.className.split(' ').some(c => c.startsWith('bc-'))
+  );
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -99,10 +102,9 @@ function initScrollAnimations() {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     });
-    
+
     animatedElements.forEach(el => observer.observe(el));
   } else {
-    // 對於不支持 IntersectionObserver 的瀏覽器，直接顯示
     animatedElements.forEach(el => el.classList.add('fade-in'));
   }
 }
