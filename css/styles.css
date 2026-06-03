@@ -15,9 +15,9 @@
   --color-text-light: #666666;
   
   /* 字體 */
-  --font-heading: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
-  --font-body: 'DM Sans', 'Noto Sans TC', system-ui, sans-serif;
-  --font-serif: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  --font-heading: 'Jost', 'Noto Sans TC', Helvetica, Arial, sans-serif;
+  --font-body: 'Noto Sans TC', 'Jost', Helvetica, Arial, sans-serif;
+  --font-serif: 'Jost', 'Noto Sans TC', Helvetica, Arial, sans-serif;
   
   /* 間距 */
   --spacing-xs: 8px;
@@ -241,9 +241,11 @@ img {
 /* --- 特色區塊 --- */
 .features {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .feature-card {

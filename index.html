@@ -14,8 +14,7 @@
   <link rel="apple-touch-icon" href="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
   <style>
     /* ===== HERO NAV ===== */
@@ -125,15 +124,18 @@
     .story-section {
       background-image: url('assets/ba616a_5bb22f7b54fe4713916c7b87c26b26be_mv2.png');
       background-size: cover;
-      background-position: center;
-      padding: 80px 0;
+      background-position: center top;
+      min-height: 520px;
+      padding: 100px 0;
       position: relative;
+      display: flex;
+      align-items: center;
     }
     .story-section::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.45);
+      background: rgba(0,0,0,0.30);
     }
     .story-section .container {
       position: relative;
@@ -341,36 +343,47 @@
       color: #272120;
       margin-bottom: 30px;
     }
-    .cleaning-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
+    .cleaning-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
     }
-    .cleaning-steps p {
+    .cleaning-step {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .cleaning-step:nth-child(even) {
+      grid-template-columns: 1fr 240px;
+    }
+    .cleaning-step:nth-child(even) img { order: 2; }
+    .cleaning-step:nth-child(even) .step-text { order: 1; }
+    .cleaning-step img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .step-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: #D0AC68;
+      margin-bottom: 8px;
+    }
+    .step-text p {
       font-size: 16px;
       color: #444;
       line-height: 1.9;
-      margin-bottom: 18px;
     }
-    .cleaning-steps p:last-child { margin-bottom: 0; }
-    .cleaning-photos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .cleaning-photos img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .cleaning-photos img:first-child {
-      grid-column: 1 / -1;
-      aspect-ratio: 16/9;
-    }
-    @media (max-width: 680px) {
-      .cleaning-layout { grid-template-columns: 1fr; }
+    @media (max-width: 640px) {
+      .cleaning-step,
+      .cleaning-step:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+      .cleaning-step:nth-child(even) img { order: unset; }
+      .cleaning-step:nth-child(even) .step-text { order: unset; }
     }
 
     /* ===== SPECS SECTION ===== */
@@ -788,16 +801,27 @@
     <section class="cleaning-section">
       <div class="container">
         <h2 class="bc-fade-up">清潔與維護</h2>
-        <div class="cleaning-layout">
-          <div class="cleaning-steps">
-            <p class="bc-fade-up" data-bc-delay="60">一般來說，只要在收帳前讓舒適邊境枕在帳下自然通風一陣子，排出前一晚睡覺時殘存的少量濕氣，直接收納即可。</p>
-            <p class="bc-fade-up" data-bc-delay="120">如果想要清洗，只要裝入細網洗衣袋中，即可用洗衣機的「手洗」、「柔洗」或「羊毛洗程」清洗。</p>
-            <p class="bc-fade-up" data-bc-delay="180">清潔完後，可自然風乾或用烘衣機低溫烘乾（通常為40～50度C，最高不超過60度C）。</p>
+        <div class="cleaning-steps">
+          <div class="cleaning-step bc-fade-up">
+            <img src="assets/ba616a_79411422e8704db4a6af461384521df7_mv2.jpeg" alt="自然通風" loading="lazy"/>
+            <div class="step-text">
+              <p class="step-num">STEP 01 ── 日常收納</p>
+              <p>一般來說，只要在收帳前讓舒適邊境枕在帳下自然通風一陣子，排出前一晚睡覺時殘存的少量濕氣，直接收納即可。</p>
+            </div>
           </div>
-          <div class="cleaning-photos bc-from-tr">
-            <img src="assets/ba616a_79411422e8704db4a6af461384521df7_mv2.jpeg" alt="清潔示範" loading="lazy"/>
-            <img src="assets/ba616a_871d1681245a4fd9b4ed6d37bfde4668_mv2.jpg" alt="清潔步驟" loading="lazy"/>
-            <img src="assets/Pouring_20Laundry_20Detergent.jpeg" alt="清洗示範" loading="lazy"/>
+          <div class="cleaning-step bc-fade-up" data-bc-delay="80">
+            <img src="assets/Pouring_20Laundry_20Detergent.jpeg" alt="機洗清潔" loading="lazy"/>
+            <div class="step-text">
+              <p class="step-num">STEP 02 ── 機洗清潔</p>
+              <p>如果想要清洗，只要裝入細網洗衣袋中，即可用洗衣機的「手洗」、「柔洗」或「羊毛洗程」清洗。</p>
+            </div>
+          </div>
+          <div class="cleaning-step bc-fade-up" data-bc-delay="160">
+            <img src="assets/ba616a_871d1681245a4fd9b4ed6d37bfde4668_mv2.jpg" alt="乾燥收納" loading="lazy"/>
+            <div class="step-text">
+              <p class="step-num">STEP 03 ── 乾燥</p>
+              <p>清潔完後，可自然風乾或用烘衣機低溫烘乾（通常為40～50度C，最高不超過60度C）。</p>
+            </div>
           </div>
         </div>
       </div>
