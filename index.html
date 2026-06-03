@@ -14,6 +14,47 @@
   <link rel="apple-touch-icon" href="assets/ba616a_172e85f8b3554c9199c259f172bafbea_mv2.png"/>
   <link rel="stylesheet" href="css/styles.css"/>
   <style>
+    /* ===== FONTS ===== */
+    @font-face {
+      font-family: 'futura-lt-w01-book';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url('fonts/futura-lt-w01-book.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'futura-lt-w01-light';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url('fonts/futura-lt-w05-light.woff2') format('woff2'),
+           url('fonts/futura-lt-w01-light.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'helvetica-w01-roman';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url('fonts/helvetica-w02-roman.woff2') format('woff2'),
+           url('fonts/helvetica-w01-roman.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'helvetica-w01-bold';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url('fonts/helvetica-w02-bold.woff2') format('woff2'),
+           url('fonts/helvetica-w01-bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'helvetica-w01-light';
+      font-style: normal; font-weight: 400; font-display: swap;
+      src: url('fonts/helvetica-w02-light.woff2') format('woff2'),
+           url('fonts/helvetica-w01-light.woff2') format('woff2');
+    }
+    /* Apply fonts globally */
+    body {
+      font-family: 'helvetica-w01-roman', Helvetica, Arial, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6,
+    .nav-menu a, .btn, .btn-gold {
+      font-family: 'futura-lt-w01-book', 'Futura', Helvetica, Arial, sans-serif;
+    }
+    p, li, td, th, .retailer-card p {
+      font-family: 'helvetica-w01-roman', Helvetica, Arial, sans-serif;
+    }
     /* ===== HERO ===== */
     .hero-photo {
       min-height: 100vh;
@@ -139,7 +180,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.18);
     }
     .demo-section .container {
       position: relative;
