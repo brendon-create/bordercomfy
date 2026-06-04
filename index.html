@@ -99,7 +99,7 @@
     }
     .why-section .section-lead {
       font-size: clamp(18px, 2.5vw, 26px);
-      font-weight: bold;
+      font-weight: 500;
       color: #272120;
       text-align: center;
       line-height: 1.5;
@@ -108,19 +108,17 @@
     .why-images {
       display: flex;
       overflow: hidden;
-      height: 260px;
-      margin: 0 -24px;
+      width: 100%;
+      align-items: flex-start;
     }
     .why-images img {
-      width: 58%;
+      width: 56%;
       flex-shrink: 0;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
       display: block;
     }
     .why-images img:first-child {
-      margin-right: -16%;
+      margin-right: -12%;
     }
 
     /* ===== STORY SECTION ===== */
@@ -657,10 +655,10 @@
     <section class="why-section">
       <div class="container">
         <h2 class="section-lead bc-fade-up">市面上露營枕已經這麼多，<br/>為什麼我們要從頭設計一個露營枕？</h2>
-        <div class="why-images">
-          <img src="assets/ba616a_bb9453f2e85441a2ac447a2f7fd6888f_mv2.png" alt="露營枕問題分析左側" class="bc-from-tl"/>
-          <img src="assets/ba616a_bc6b7be2050a4938a9a83d953471b916_mv2.png" alt="露營枕問題分析右側" class="bc-from-tr"/>
-        </div>
+      </div>
+      <div class="why-images">
+        <img src="assets/ba616a_bb9453f2e85441a2ac447a2f7fd6888f_mv2.png" alt="露營枕問題分析左側" class="bc-from-tl"/>
+        <img src="assets/ba616a_bc6b7be2050a4938a9a83d953471b916_mv2.png" alt="露營枕問題分析右側" class="bc-from-tr"/>
       </div>
     </section>
 
