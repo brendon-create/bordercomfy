@@ -47,6 +47,8 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* --- 排版 --- */
