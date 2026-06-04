@@ -330,7 +330,7 @@ img {
 }
 
 .testimonial-card .author {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-primary);
 }
 
@@ -373,7 +373,7 @@ img {
 
 .price-tag {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
 }
@@ -398,7 +398,7 @@ img {
 .faq-question {
   padding: var(--spacing-md);
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-primary);
   display: flex;
   justify-content: space-between;
